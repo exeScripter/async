@@ -1,5 +1,5 @@
-# Make an application that lets download a certain file from the web
-#
+# MIT License
+# github.com/exeScripter/async
 
 # Import the necessary modules
 import asyncio
@@ -9,12 +9,18 @@ import os
 import sys
 import datetime
 import tqdm
+import webbrowser
 # ASCII
 import pyfiglet
 
+# Set the title of the program
+async def title():
+    # ASCII
+    async with asyncio.get_running_loop().run_in_executor(None, pyfiglet.figlet_format, "async") as result:
+        print(result)
 
 # Print the ASCII art
-print(pyfiglet.figlet_format("async_studios", font="slant"))
+print(pyfiglet.figlet_format("Async Manager", font="slant"))
 
 # Print welcome message
 print("------------------------------------------------------")
@@ -26,8 +32,8 @@ print("Current date and time: " + str(datetime.datetime.now()))
 print("------------------------------------------------------")
 
 # set the url for the checker
-url = 'https://pastebin.com/raw/4y2GVi0Y'
-version = '1.10b'
+url = 'https://pastebin.com/raw/0Vq7K1pn'
+version = '2.50b'
 
 # check if the script is up to date
 r = requests.get(url)
@@ -52,17 +58,19 @@ time.sleep(2)
 # Show update logs
 print("Update logs: " + r.text)
 print("------------------------------------------------------")
-print("[+] Added ASCII to all the scripts")
-print("[+] Added a new update checker")
-print("[=] Fixed a bug with the update checker")
+print("[+] Discord Server")
+print("[=] Fixed Major Bugs")
 print("------------------------------------------------------")
 # print out the available options
 time.sleep(2)
 print("Available options:")
 print("1. Download 'YouTube Downloader'")
-print("2. Download 'Kalkulator")
+print("2. Download 'Kalkulator'")
 print("3. Download 'Generator Haseł'")
-print("4. Exit")
+print("4. Download 'Website Hooker'")
+print("5. Download 'URL Shortener'")
+print("6. Join Discord Server")
+print("7. Exit")
 print("------------------------------------------------------")
 # ask the user for the option
 time.sleep(1.5)
@@ -75,7 +83,7 @@ if option == "1":
     print("Downloading 'YouTube Downloader'")
     print("------------------------------------------------------")
     # set the url for the file
-    url = 'https://pastebin.com/raw/1T5SSVyk'
+    url = 'https://raw.githubusercontent.com/exeScripter/async/main/py/youtube_downloader.py'
     # set the file name
     filename = 'YouTube_Downloader.py'
     # download the file
@@ -84,7 +92,6 @@ if option == "1":
     with open(filename, 'wb') as f:
         f.write(r.content)
     # print that the file has been downloaded
-    print("------------------------------------------------------")
     print("Download complete!")
     print("------------------------------------------------------")
 # if the user chooses 2, download the file
@@ -94,7 +101,7 @@ elif option == "2":
     print("Downloading 'Kalkulator'")
     print("------------------------------------------------------")
     # set the url for the file
-    url = 'https://pastebin.com/raw/i1J8XkVk'
+    url = 'https://raw.githubusercontent.com/exeScripter/async/main/py/calculator.py'
     # set the file name
     filename = 'Kalkulator.py'
     # download the file
@@ -103,7 +110,6 @@ elif option == "2":
     with open(filename, 'wb') as f:
         f.write(r.content)
     # print that the file has been downloaded
-    print("------------------------------------------------------")
     print("Download complete!")
     print("------------------------------------------------------")
 # if the user chooses 3, download the file
@@ -113,7 +119,7 @@ elif option == "3":
     print("Downloading 'Generator Haseł'")
     print("------------------------------------------------------")
     # set the url for the file
-    url = 'https://pastebin.com/raw/wxKUgTRf'
+    url = 'https://raw.githubusercontent.com/exeScripter/async/main/py/generator_hase%C5%82.py'
     # set the file name
     filename = 'Generator_Haseł.py'
     # download the file
@@ -122,12 +128,61 @@ elif option == "3":
     with open(filename, 'wb') as f:
         f.write(r.content)
     # print that the file has been downloaded
-    print("------------------------------------------------------")
     print("Download complete!")
     print("------------------------------------------------------")
 
-# if the user chooses 4, exit the program
 elif option == "4":
+    # download the file
+    print("------------------------------------------------------")
+    print("Downloading 'Website Hooker'")
+    print("------------------------------------------------------")
+    # set the url for the file
+    url = 'https://raw.githubusercontent.com/exeScripter/async/main/py/website_hooker.py'
+    # set the file name
+    filename = 'Website_Hooker.py'
+    # download the file
+    r = requests.get(url)
+    # write the file to the disk
+    with open(filename, 'wb') as f:
+        f.write(r.content)
+    # print that the file has been downloaded
+    print("Download complete!")
+    print("------------------------------------------------------")
+
+elif option == "5":
+    # download the file
+    print("------------------------------------------------------")
+    print("Downloading 'URL Shortener'")
+    print("------------------------------------------------------")
+    # set the url for the file
+    url = 'https://raw.githubusercontent.com/exeScripter/async/main/py/url_shortener.py'
+    # set the file name
+    filename = 'URL_Shortener.py'
+    # download the file
+    r = requests.get(url)
+    # write the file to the disk
+    with open(filename, 'wb') as f:
+        f.write(r.content)
+    # print that the file has been downloaded
+    print("Download complete!")
+    print("------------------------------------------------------")
+
+elif option == "6":
+    # ask the user for the discord server
+    print("------------------------------------------------------")
+    print("Please join our Discord server!")
+    # set the url for the discord server
+    url = 'https://discord.gg/T9rh6VMpSA'
+    # open the discord server
+    webbrowser.open(url)
+    # print that the discord server has been opened
+    print("------------------------------------------------------")
+    print("Discord server opened!")
+    # ask the user if they want to exit
+    print("------------------------------------------------------")
+
+# if the user chooses 7, exit the program
+elif option == "7":
     # exit the program
     print("------------------------------------------------------")
     print("Exiting...")
@@ -138,20 +193,6 @@ else:
     print("------------------------------------------------------")
     print("Invalid option!")
     print("------------------------------------------------------")
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 
 
 
