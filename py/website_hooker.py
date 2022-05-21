@@ -21,8 +21,8 @@ print("Aktualny czas i data: " + str(datetime.datetime.now()))
 print("------------------------------------------------------")
 
 # set the url for the checker
-url = 'https://pastebin.com/raw/4y2GVi0Y'
-version = '1.10b'
+url = 'https://pastebin.com/raw/7VeDf2ii'
+version = '1.80b'
 
 # check if the script is up to date
 r = requests.get(url)
@@ -56,28 +56,36 @@ print("Kod HTML: ")
 print(html)
 print("------------------------------------------------------")
 
+# copy to clipboard
+os.system("echo '" + html + "' | clip")
+# print a message to the user that the code has been copied to the clipboard
+print("Kod HTML został skopiowany do schowka!")
+print("------------------------------------------------------")
+
 
 # ask the user if he wants to save the html code
 save = str(input("Czy chcesz zapisać Kod HTML? (y/n) \n "))
 
 # if the user wants to save the html code
+# save the html code to a file with proper encoding
 if save == "y":
-    # ask the user for the name of the file
+    # ask the user for the file name
     filename = str(input("Podaj nazwę pliku: \n "))
-    # save the html code to the file
-    with open(filename, "w") as f:
-        f.write(html)
-    print("------------------------------------------------------")
-    print("Zapisano Kod HTML do pliku: " + filename)
-    print("------------------------------------------------------")
+    # save the html code to a file
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write(html)
+        print("------------------------------------------------------")
+        print("Zapisano kod HTML do pliku!")
+        print("------------------------------------------------------")
     # if the user does not want to save the html code
 else:
-    # print that the html code was not saved
     print("------------------------------------------------------")
-    print("Kod HTML nie został zapisany!")
+    print("Nie zapisano kodu HTML!")
     print("------------------------------------------------------")
+    
 
-# Prevent the file from closing
+
+        
 input("\n\nPress the enter key to exit.")
 
 
