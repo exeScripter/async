@@ -32,8 +32,8 @@ print("Current date and time: " + str(datetime.datetime.now()))
 print("------------------------------------------------------")
 
 # set the url for the checker
-url = 'https://pastebin.com/raw/0Vq7K1pn'
-version = '2.50b'
+url = 'https://pastebin.com/raw/XhdfzGqe'
+version = '3.0'
 
 # check if the script is up to date
 r = requests.get(url)
@@ -58,8 +58,8 @@ time.sleep(2)
 # Show update logs
 print("Update logs: " + r.text)
 print("------------------------------------------------------")
-print("[+] Discord Server")
-print("[=] Fixed Major Bugs")
+print("[+] Added two new scripts to the list!")
+print("[+] Added a new feature!")
 print("------------------------------------------------------")
 # print out the available options
 time.sleep(2)
