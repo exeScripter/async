@@ -58,7 +58,7 @@ if average < 4.5:
     print("------------------------------------------------------")
 
 # if the average is above 4.75 print that
-if average > 4.75:
+if average == 4.75:
     print("Twoja średnia jest powyżej 4.75!")
     print("Gratulacje masz czerwony pasek!")
     print("------------------------------------------------------")
