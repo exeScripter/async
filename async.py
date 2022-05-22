@@ -69,8 +69,10 @@ print("2. Download 'Kalkulator'")
 print("3. Download 'Generator Haseł'")
 print("4. Download 'Website Hooker'")
 print("5. Download 'URL Shortener'")
-print("6. Join Discord Server")
-print("7. Exit")
+print("6. Download 'Średnia'")
+print("7. Download 'Lech czy Legia?'")
+print("8. Join Discord Server")
+print("9. Exit")
 print("------------------------------------------------------")
 # ask the user for the option
 time.sleep(1.5)
@@ -168,6 +170,42 @@ elif option == "5":
     print("------------------------------------------------------")
 
 elif option == "6":
+    # download the file
+    print("------------------------------------------------------")
+    print("Downloading 'Średnia'")
+    print("------------------------------------------------------")
+    # set the url for the file
+    url = 'https://raw.githubusercontent.com/exeScripter/async/main/py/srednia.py'
+    # set the file name
+    filename = 'Średnia.py'
+    # download the file
+    r = requests.get(url)
+    # write the file to the disk
+    with open(filename, 'wb') as f:
+        f.write(r.content)
+    # print that the file has been downloaded
+    print("Download complete!")
+    print("------------------------------------------------------")
+
+elif option == "7":
+        # download the file
+    print("------------------------------------------------------")
+    print("Downloading 'Lech czy Legia?'")
+    print("------------------------------------------------------")
+    # set the url for the file
+    url = 'https://raw.githubusercontent.com/exeScripter/async/main/py/lech_legia.py'
+    # set the file name
+    filename = 'Lech_czy_Legia.py'
+    # download the file
+    r = requests.get(url)
+    # write the file to the disk
+    with open(filename, 'wb') as f:
+        f.write(r.content)
+    # print that the file has been downloaded
+    print("Download complete!")
+    print("------------------------------------------------------")
+
+elif option == "8":
     # ask the user for the discord server
     print("------------------------------------------------------")
     print("Please join our Discord server!")
@@ -182,7 +220,7 @@ elif option == "6":
     print("------------------------------------------------------")
 
 # if the user chooses 7, exit the program
-elif option == "7":
+elif option == "9":
     # exit the program
     print("------------------------------------------------------")
     print("Exiting...")
