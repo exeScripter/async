@@ -20,11 +20,11 @@ async def title():
         print(result)
 
 # Print the ASCII art
-print(pyfiglet.figlet_format("Async Manager", font="slant"))
+print(pyfiglet.figlet_format("Async Project", font="slant"))
 
 # Print welcome message
 print("------------------------------------------------------")
-print("Welcome to async_studios file manager!")
+print("Welcome to Official Async Files Manager!")
 print("Made by: @theAsyncStudios")
 print("github.com/theAsyncStudios")
 # print the current date and time
