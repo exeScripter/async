@@ -52,11 +52,20 @@ print("------------------------------------------------------")
 print("Twoja średnia wynosi: " + str(average))
 print("------------------------------------------------------")
 
+# if the average is less than 4.5, print that
+if average < 4.5:
+    print("Twoja średnia jest na dobrym bądź słabym poziomie!")
+    print("------------------------------------------------------")
+
 # if the average is above 4.75 print that
 if average > 4.75:
-    print("------------------------------------------------------")
     print("Twoja średnia jest powyżej 4.75!")
     print("Gratulacje masz czerwony pasek!")
+    print("------------------------------------------------------")
+# if the average is equal to 6.00 print that
+elif average == 6.00:
+    print("Twoja średnia jest równa 6.00!")
+    print("Jesteś kurwa kujonem!")
     print("------------------------------------------------------")
 
 # exit the program
